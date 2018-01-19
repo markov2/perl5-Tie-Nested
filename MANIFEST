@@ -1,6 +1,8 @@
 ChangeLog
 MANIFEST
 Makefile.PL
+README.md
 lib/Tie/Nested.pm
 t/10recurse.t
 t/20nest.t
+xt/99pod.t

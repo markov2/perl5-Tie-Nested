@@ -1,7 +1,11 @@
-use warnings;
-use strict;
+# This code is part of distribution Tie::Nested.  Meta-POD processed with
+# OODoc into POD and HTML manual-pages.  See README.md
+# Copyright Mark Overmeer.  Licensed under the same terms as Perl itself.
 
 package Tie::Nested;
+
+use warnings;
+use strict;
 
 use Log::Report 'tie-nested', syntax => 'SHORT';
 use Data::Dumper;
@@ -20,7 +24,7 @@ Tie::Nested - multiple levels of nested tied HASHes and ARRAYs
   $d{FOO}{BAR} = 42;
   print Data::Dumper::Dumper \%d;   # {foo => {bar => 42}};
 
-  $d{nEw} = {with}{NestEd}{asSIgn => 3}; # works!
+  $d{nEw} = +{with}{NestEd}{asSIgn => 3}; # works!
 
   tie my(%e), 'Tie::Nested'
      , nestings => ['Hash::Case::Lower', 'Hash::Case::Upper'];
